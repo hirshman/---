@@ -30,6 +30,7 @@ namespace FeeCalculator.Controllers
 
         #region Get methods
         [HttpGet]
+        [Route("GetCategories")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IEnumerable<Category> GetCategories()
         {
@@ -39,6 +40,7 @@ namespace FeeCalculator.Controllers
             return categories;
         }
         [HttpGet]
+        [Route("Get")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IEnumerable<Fee> Get()
         {

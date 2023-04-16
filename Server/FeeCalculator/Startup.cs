@@ -30,6 +30,7 @@ namespace FeeCalculator
         {
             services.AddScoped(typeof(IRepository), typeof(Repository));
             services.AddScoped(typeof(IFeeService), typeof(FeeService));
+            services.AddScoped(typeof(ILoggerService), typeof(LoggerService));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
