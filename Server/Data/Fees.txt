@@ -1,0 +1,18 @@
+Fees:[
+	{
+		id:1,
+		CategoryId:1,
+		Name:A,
+		Description:"" ,
+		MeasureType:"",
+		AmountPerUnit:200
+	},
+	{
+		id:1,
+		CategoryId:2,
+		Name:B,
+		Description:"" ,
+		MeasureType:"",
+		AmountPerUnit:350
+	}
+]
