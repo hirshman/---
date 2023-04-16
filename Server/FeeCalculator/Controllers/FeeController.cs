@@ -33,9 +33,10 @@ namespace FeeCalculator.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IEnumerable<Category> GetCategories()
         {
-            
-            //return 
-            //.ToArray();
+
+            //TODO try catch
+            var categories = _feeService.GetAllCategories();
+            return categories;
         }
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
