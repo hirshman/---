@@ -1,4 +1,14 @@
-Fees:[
+categories:[
+	{  
+	  "id": 1,  
+	  "name": "build"
+	},
+	{  
+	  "id": 2,  
+	  "name": "building"
+	},
+],
+fees:[
 	{
 		id:1,
 		CategoryId:1,

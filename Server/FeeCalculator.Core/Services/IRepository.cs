@@ -12,15 +12,12 @@ namespace FeeCalculator.Core.Services
         void Add(T entity);
         void Update(T entity);
         void Delete(T entity);
-        T Get(Func<T, bool> predicate);
-        T Get(int id);
-        IEnumerable<T> GetAll(Func<T, bool> predicate = null);
-        //IEnumerable<T> GetAllDetach(Func<T, bool> predicate = null);
-       //int ExecuteSql(string sSql, params object[] pars);
-        //int ExecuteGetNewIndex(string prefix);
-        //T SQLQuery(string sSql, params object[] pars);
-        //void BeginTransaction();
-        //bool EndTransaction();
-        //void RollBack();
+        //T Get(Func<T, bool> predicate);
+       // T Get(int id);
+
+        Fee Get(int id);       
+        IEnumerable<Fee> GetByCategory(int categoryId);
+        IEnumerable<Category> GetAllCategories();
+
     }
 }
