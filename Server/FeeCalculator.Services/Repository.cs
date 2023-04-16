@@ -99,9 +99,9 @@ namespace FeeCalculator.Services
                         }
 
                     }
-                    return fees;
+                    return fees.Where(x=> x.CategoryId==categoryId);
                 }
-                return fees;
+                return null;
             }
             catch (Exception)
             {

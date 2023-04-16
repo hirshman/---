@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace FeeCalculator.Core.Services
 {
-    public interface IRepository<T> where T : class
+    public interface IRepository
     {
-        void Add(T entity);
-        void Update(T entity);
-        void Delete(T entity);
+        //void Add(T entity);
+        //void Update(T entity);
+        //void Delete(T entity);
         //T Get(Func<T, bool> predicate);
        // T Get(int id);
 

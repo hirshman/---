@@ -9,8 +9,7 @@ namespace FeeCalculator.Core.Services
 {
     public interface IFeeService
     {
-       Fee Get(int id);
-       Fee GetAll();
-       Category GetCategory();
+        IEnumerable<Fee> GetByCategory(int categoryId);
+        IEnumerable<Category> GetAllCategories();
     }
 }
