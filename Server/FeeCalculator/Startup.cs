@@ -40,8 +40,12 @@ namespace FeeCalculator
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "FeeCalculator v1"));
+                app.UseSwagger(x => x.SerializeAsV2 = true);
+                app.UseSwaggerUI(option =>
+                 {
+                     option.SwaggerEndpoint("/swagger/v1/swagger.json", "FeeCalculator v1");
+                     option.RoutePrefix = string.Empty;
+                 });
             }
 
             app.UseHttpsRedirection();
