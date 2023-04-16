@@ -1,4 +1,5 @@
 ﻿using FeeCalculator.Core.Models;
+using FeeCalculator.Core.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -14,15 +15,16 @@ namespace FeeCalculator.Controllers
     public class FeeController : ControllerBase
     {
         #region Variables
-
+        private readonly IFeeService _feeService;
         private readonly ILogger<FeeController> _logger;
         #endregion
         
         
         #region Constructor
-        public FeeController(ILogger<FeeController> logger)
+        public FeeController(ILogger<FeeController> logger, IFeeService feeService)
         {
             _logger = logger;
+            _feeService = feeService;
         }
         #endregion
 
@@ -31,13 +33,9 @@ namespace FeeCalculator.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IEnumerable<Category> GetCategories()
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new Category
-            {
-                Id = 1,
-                Name="A",
-            })
-            .ToArray();
+            
+            //return 
+            //.ToArray();
         }
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
