@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FeeCalculator", "FeeCalculator\FeeCalculator.csproj", "{88AC2127-580A-4323-8116-EF3E645A9212}"
+	ProjectSection(ProjectDependencies) = postProject
+		{602D64D8-15C6-4630-8786-0099278BE684} = {602D64D8-15C6-4630-8786-0099278BE684}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FeeCalculator.Core", "FeeCalculator.Core\FeeCalculator.Core.csproj", "{654C4300-7747-468F-B5E0-B30EA8D51BC1}"
 EndProject
