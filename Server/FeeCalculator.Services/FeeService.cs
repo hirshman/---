@@ -8,7 +8,7 @@ using Core.Enums;
 
 namespace FeeCalculator.Services
 {
-    public class Repsitory : IRepository
+    public class FeeService : IFeeService
     {
         #region Variables
 
@@ -19,10 +19,8 @@ namespace FeeCalculator.Services
 
         #region Constructor
 
-        public Repsitory(
-                                ILoggerService loggerService)
+        public FeeService(ILoggerService loggerService)
         {
-           
             _loggerService = loggerService;
         }
 
@@ -103,7 +101,20 @@ namespace FeeCalculator.Services
         //    return null;
 
         //}
+        public Fee Get(int id)
+        {
+            throw new NotImplementedException();
+        }
 
+        public Fee GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Category GetCategory()
+        {
+            throw new NotImplementedException();
+        }
 
         #endregion
 
