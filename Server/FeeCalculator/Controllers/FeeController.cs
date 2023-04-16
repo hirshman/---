@@ -53,15 +53,11 @@ namespace FeeCalculator.Controllers
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [Route("Get/{id:int}")]
-        public IEnumerable<Fee> Get(int id)
+        public IEnumerable<Fee> Get(int catogryId)
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(
-                index => new Fee
-                {
-                   
-                })
-            .ToArray();
+            //TODO try catch
+            var fees = _feeService.GetByCategory(catogryId);
+            return fees;
         }
         #endregion
     }
